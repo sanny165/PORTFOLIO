@@ -1,0 +1,164 @@
+/*global styles (styles for both index and resume)*/
+
+/*colour pallete
+--primary-color: #00796B;
+  --accent-color: #4DB6AC;
+  --background-color: #E0F2F1;
+  --text-dark: #263238;
+  --text-light: #FAFAFA;
+  */
+
+body{
+    background-color:#E0F2F1;
+    height:100%;
+    margin:0;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+}
+
+/*box sizing reset*/
+html{
+    box-sizing: border-box;
+    height:100%;
+    
+}
+*,::after,::before{
+    box-sizing:inherit
+}
+
+a{
+    color: #4DB6AC
+}
+a:hover{
+    color:burlywood
+}
+
+footer a{
+    color:burlywood
+}
+footer a:hover{
+    color:#4DB6AC
+}
+.btn{
+    display: inline-block;
+    background-color: #00796B;
+    color:#E0F2F1;
+    width: 160px;
+    height:38px;
+    text-decoration: none;
+    text-align:center;
+    padding-top: 10px;
+    border-radius: 5px;
+}
+
+
+/*index*/
+.home{
+    background:url(/PORTFOLIO/placeholder-images/bg-home-office-city.jpg) no-repeat;
+    background-size: cover;
+}
+
+.home .contentwrapper{
+    max-width:900px;  /*width gives fixed width max width helps in making page responsive by shrinking content with width when screen size is small*/
+    margin:0 auto;
+    padding:15px;
+    flex-grow: 1;
+}
+
+.home .contentwrapper .contentwrapperbg{
+    background-color: rgba(255,255,255,0.9);
+    max-width:900px;  /*width gives fixed width max width helps in making page responsive by shrinking content with width when screen size is small*/
+    padding:15px;
+    margin:0 auto;
+}
+
+/*resume*/
+.resume{
+    background-color:#E0F2F1;
+}
+.resume header::before{
+    background:url(/PORTFOLIO/placeholder-images/bg-home-office-city.jpg) no-repeat center;
+    content:"";
+    width:100%;
+    display:block;
+    height:375px;
+    background-size:cover;
+}
+
+.contentwrapper{
+    
+}
+
+.resume .contentwrapper{
+    max-width:900px;
+    margin:0 auto;
+}
+.resumesection{
+    margin-bottom:75px;
+}
+
+.resumesection h2{
+    margin-bottom:30px;
+    border-bottom:#00796B 2px dashed;
+}
+
+#pdf{
+    position:fixed;
+    margin:15px;
+}
+
+
+/*profile*/
+
+/*projects*/
+
+.projectitem img{
+    float:left;
+    max-width:500px;
+    max-height:300px;
+    margin-right:15px;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.projectitem{
+    display:flow-root;
+}
+/*work experience*/
+
+/*education*/
+
+/*footer*/
+footer{
+    background-color: black;
+    color: #FAFAFA;
+    position:sticky;
+    bottom:0px;
+    width:100%;
+    margin:0px;
+    padding:2px;
+    display:flex;
+    box-sizing:border-box;
+    padding-inline:20px;
+    
+}
+.socials{
+    list-style: none;
+    padding:5px;
+    display:flex;
+    
+}
+.socials li img{
+    margin:3px;
+    margin-right:15px;
+    height:30px;
+    width:30px;
+}
+
+.socials li img:hover{
+    opacity:50%;
+}
+
+.content{
+    flex-grow:1;
+}

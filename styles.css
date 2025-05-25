@@ -21,6 +21,7 @@ body{
 html{
     box-sizing: border-box;
     height:100%;
+    font-size: 62.5%; 
     
 }
 *,::after,::before{
@@ -108,52 +109,100 @@ footer a:hover{
     margin:15px;
 }
 
+.resume a{
+    font-size: 1.5rem;;
+}
+
 
 /*profile*/
 
 /*projects*/
+.resume #projectsection{
+    background-color: rgb(231, 234, 236);
+    padding: 20px;
+    border-style: dotted;
+}
 
 .projectitem img{
     float:left;
-    max-width:500px;
-    max-height:300px;
+    max-width:400px;
+    max-height:350px;
     margin-right:15px;
     margin-top:15px;
     margin-bottom:15px;
 }
+.projectitem img:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
 .projectitem{
     display:flow-root;
 }
+
+.projectitem .btn:hover {
+  background-color: #000000;
+}
+
 /*work experience*/
 
+.resume #worksection{
+    background-color: whitesmoke;
+    padding: 20px;
+    border-style:inset;
+}
+.workitem{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+}
+
 /*education*/
+.resume #educationsection{
+    background-color: rgb(231, 234, 236);
+    padding: 20px;
+    border-style:outset;
+}
+
+/*certifications*/
+.resume #certificationsection{
+    background-color: whitesmoke;
+    padding: 20px;
+    border-style: dotted;
+}
 
 /*footer*/
-footer{
+footer {
     background-color: black;
-    color: #FAFAFA;
-    position:sticky;
-    bottom:0px;
-    width:100%;
-    margin:0px;
-    padding:2px;
-    display:flex;
-    box-sizing:border-box;
-    padding-inline:20px;
-    
+    color: #ffffff;
+    width: 100dvw;
+    margin: 0;
+    display: flex;
+    align-items: center;  
+    justify-content: space-between;  
+    box-sizing: border-box;
+    padding: 10px 20px;
+    flex-wrap: wrap;  
 }
-.socials{
+
+footer .content p {
+    color: rgb(192, 195, 197);
+    margin: 0; /* Prevent margin from stretching height */
+}
+
+.socials {
     list-style: none;
-    padding:5px;
-    display:flex;
-    
+    display: flex;
+    gap: 10px; /* Better than margin-right on images */
+    padding: 0;
+    margin: 0;
 }
-.socials li img{
-    margin:3px;
-    margin-right:15px;
-    height:30px;
-    width:30px;
+
+.socials li img {
+    width: 30px;
+    height: auto;
+    display: block;
 }
+
 
 .socials li img:hover{
     opacity:50%;
@@ -161,4 +210,147 @@ footer{
 
 .content{
     flex-grow:1;
+}
+
+/*font size(rem) style family*/
+
+
+/* Name - Elegant and standout */
+.home h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 6rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 0.5rem;
+}
+
+/* Job title - Simple, spaced, stylish */
+
+
+.caveat-uniquifier {
+  font-family: "Caveat", cursive;
+  font-optical-sizing:auto;
+  font-weight: 400;
+  font-style:normal;
+}
+
+
+.home h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-align: center;
+  color: #444;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+.resume h1{
+    font-family: "times new roman", "Caveat", cursive;
+    font-size: 5.3rem;
+    margin: 1.5rem;
+
+}
+.resume h2{
+    font-family: "Caveat", cursive;
+    font-size: 3.6rem;
+    margin: 1.5rem;
+    
+}
+.resume h3{
+    font-family: "Caveat", cursive;
+    font-size: 2.5rem;
+    margin: 1.5rem;
+    
+}
+p,li{
+    font-size: 1.65rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+    margin: 1.5rem;
+    font-family: 'comic sans ms', cursive, sans-serif;
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  header h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .projectitem img {
+    width: 100%;
+    margin: 10px 0;
+    float: none;
+  }
+
+  .workitem {
+    display: block;
+  }
+
+  footer {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .socials {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 859px) {
+  .project-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+
+  .projectitem img {
+    width: 100%;
+  }
+
+  .workitem {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media (min-width: 860px) {
+  .projectitem {
+    display: flow-root;
+  }
+
+  .projectitem img {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .workitem {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 20px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1250px) {
+  #pdf {
+    position: absolute;
+  }
 }
